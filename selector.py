@@ -3,15 +3,17 @@
 
 import random
 
-#def random_select():
-
-#    num_list = []
-#    for i in range(6):
-#	n = random.randint(1,46)
-#	num_list.append(n)
-
-# print(num_list)
+def get_lucky_nums():
+    return random.sample(range(1, 45+1), k=6)
 
 
-result = random.sample(range(1, 45+1), k=6)
-print(result)	
+if __name__ == '__main__':
+    times = int(input('Enter num(1-100): '))
+    for _ in range(times):
+        print(sort(get_lucky_nums()))
+
+
+# result = random.sample(range(1, 45+1), k=6)
+# print(result)
+
+	
